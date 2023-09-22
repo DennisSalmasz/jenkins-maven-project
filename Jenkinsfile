@@ -8,7 +8,7 @@ pipeline {
             post {
                 success {
                     echo "Now Archiving the Artifacts....."
-                    archiveArtifacts artifacts: '**/*.jar'
+
                 }
             }
         }
@@ -18,7 +18,7 @@ pipeline {
             }
             post {
                 always {
-                    junit 'hello-app/target/surefire-reports/*.xml'
+
                 }
             }
         }
